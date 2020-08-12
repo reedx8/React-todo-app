@@ -3,6 +3,7 @@ import React, { Component } from 'react'; // This is what YT coder used isntead 
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 //import uuid from "uuid";
 import {v4 as uuid} from "uuid";

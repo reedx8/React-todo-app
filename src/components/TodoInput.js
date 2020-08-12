@@ -13,13 +13,13 @@ export default class TodoInput extends Component {
                                 <i className="fas fa-book"/>
                             </div>
                         </div>
-                        <input type="text" className="form-control" placeholder="Add a todo item" value={item} onChange={handleChange}/>
+                        <input type="text" className="form-control" placeholder="Add an item here" value={item} onChange={handleChange}/>
                     </div>
                     <button 
                     type="submit" 
                     className={
                     editItem ? "btn btn-block btn-success mt-3": "btn btn-block btn-primary mt-3"}> 
-                    {editItem ? "Edit item" : "Add item"}</button>
+                    {editItem ? "Edit item" : "Add"}</button>
                 </form>
             </div>
         )
