@@ -14,3 +14,9 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.btn {
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

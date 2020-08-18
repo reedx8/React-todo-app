@@ -10,7 +10,7 @@ export default class TodoInput extends Component {
                     <div className="input-group">
                         <div className="input-group-prepend">
                             <div className="input-group-text bg-primary text-white">
-                                <i className="fas fa-book"/>
+                                <i className="fas fa-list"/>
                             </div>
                         </div>
                         <input type="text" className="form-control" placeholder="Add an item here" value={item} onChange={handleChange}/>
@@ -18,8 +18,8 @@ export default class TodoInput extends Component {
                     <button 
                     type="submit" 
                     className={
-                    editItem ? "btn btn-block btn-success mt-3": "btn btn-block btn-primary mt-3"}> 
-                    {editItem ? "Edit item" : "Add"}</button>
+                    editItem ? "btn btn-success mx-auto d-block mt-2": "btn btn-primary mx-auto mt-2 d-block"}> <i class="fas fa-plus-circle"></i> 
+                    {editItem ? " Edit item" : " Add"} </button>
                 </form>
             </div>
         )
