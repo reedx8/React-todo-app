@@ -15,7 +15,7 @@ class App extends Component{ // instead of function App() {...}. function App() 
         items:[],
         id:uuid(),
         item:'',
-        editItem:false
+        editItem:false,
     }
     handleChange = (e)=> { // a function handleChange() that takes in an argument "e"
         this.setState({
@@ -24,10 +24,14 @@ class App extends Component{ // instead of function App() {...}. function App() 
     }
     
     handleSubmit = (e) =>{
-        e.preventDefault()
+        e.preventDefault();
         const newItem = {
             id:this.state.id,
             title:this.state.item
+        }
+        if(this.state.item === ''){
+            console.log("Need input");
+            return;
         }
         //console.log(newItem)
         const updatedItems = [...this.state.items, newItem]
@@ -64,12 +68,12 @@ class App extends Component{ // instead of function App() {...}. function App() 
     
     render() {
         return (
-            <div className = "container">
-                <div className = "row">
-                    <div className="col-10 mx-auto col-md-8 mt-4">
+            <div class="container">
+                <div class="left">
                         <TodoInput item={this.state.item} handleChange={this.handleChange} handleSubmit={this.handleSubmit} editItem={this.state.editItem}/>
+                </div>
+                <div class="right">
                         <TodoList items={this.state.items} clearList={this.clearList} handleDelete={this.handleDelete} handleEdit={this.handleEdit}/>
-                    </div>
                 </div>
             </div>
         );
